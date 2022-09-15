@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: #F3F3F3;
+}
+header {
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #283238;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+
+}
+.area-logo {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+.area-logo h2 {
+    margin-left: 10px;
+    color: #fff;
+}
+.area-logo h2 span {
+    color:  #D01418;
+}
+header nav {
+    margin-right: 25px;
+    width: 50%;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+header nav ul li {
+    list-style: none;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+header nav ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+header nav ul li.carrinho a {
+    color: #D01418;
+}
+header nav ul li.carrinho a:hover {
+    color: yellow;
+}
+header nav ul li a:hover {
+    color: #D01418;
+    font-weight: 700;
+    transition: all .6s;
+}
+header nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    height: 5px;
+    background-color: #D01418;
+    width: 0;
+    transition: all .6s;
+}
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    height: 5px;
+    background-color: yellow;
+    width: 0;
+   
+    transition: all .6s;
+}
+header nav ul li a:hover::after {
+    width: 50%;
+    transform: translate(-100%);
+}
+header nav ul li a:hover::before{
+    /*dica: width 100*/
+    width: 50%;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+main .section-1 {
+    width: 100%;
+    background-image: url(../img/slide.png);
+    background-size: cover;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+main .section-1 h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    width: 50%;
+}
+main .section-1 h2 span {
+    color: #D01418;
+}
+main .section-1 button {
+    width: 250px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #D01418;
+    outline: none;
+    border-radius: 12px;
+    border: none;
+    margin-top: -200px;
+    transition: all .6s ease-in-out;
+}
+main .section-1 button:hover {
+    background-color: yellow;
+    
+}
+main .section-1 button a {
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;  
+}
+
+main .section-2 {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+main .section-2 h2 {
+    font-size: 1.8rem;
+   
+}
+main .section-2 .cards {
+    display: flex;
+    width: 80%;
+    padding: 10px;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+}
+main .section-2 .cards .card {
+    background-color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: 18px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+    width: 265px;
+    transition: all .6s ease-in-out;
+}
+main .section-2 .cards .card:hover {
+    transform: scale(1.1);
+    
+}
+main .section-2 .cards .card .topo {
+    margin-top: 15px;
+}
+main .section-2 .cards .card .conteudo {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .section-2 .cards .card .conteudo p {
+    margin-top: 6px;
+}
+main .section-2 .cards .card .conteudo .preco {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+main .section-2 .cards .card .conteudo .envio {
+    color: #619D00;
+    ;
+}
+main .section-3 {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .section-3 .banners {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main .section-3 .banners .banner {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    color: #fff;
+    height: 135px;
+    width: 360px;
+}
+main .section-3 .banners .banner-1{
+    background-image: url(../img/banner1.png);
+    filter: grayscale(80%);
+    border-radius: 12px;
+    transition: all .6s ease-in-out;
+}
+main .section-3 .banners .banner-1:hover {
+    filter: grayscale(0%);
+}
+main .section-3 .banners .banner-2:hover {
+    filter: grayscale(0%);
+}
+main .section-3 .banners .banner-2 {
+    background-image: url(../img/banner2.png);
+    filter: grayscale(80%);
+    border-radius: 12px;
+    transition: all .6s ease-in-out;
+}
+footer {
+    margin-top: 15px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #283238;
+}
+footer .secao-1-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .secao-1-footer .socials {
+    width: 30%;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+
+}
+footer .secao-1-footer .socials ul {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .secao-1-footer .socials ul li a i.fa-instagram {
+    color: #CE0CFF;
+}
+footer .secao-1-footer .socials ul li a i.fa-facebook {
+    color: #1476D0;
+}
+footer .secao-1-footer .socials ul li a i.fa-twitter {
+    color: #14AED0;
+}
+@media(max-width: 800px){
+    header {
+        flex-direction: column;
+    }
+    header nav {
+        width: 100%;
+        margin-top: 20px;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin-left: 40%;
+        
+    }
+    main .section-2 .cards {
+        flex-direction: column;
+    }
+    main .section-3 .banners{
+        flex-direction: column;
+    }
+    main .section-3 .banners .banner {
+        margin-top: 15px;
+        
+    }
+    footer .secao-1-footer {
+        flex-direction: column;
+        width: 80%;
+        margin-left: 20px;
+        
+    }
+    footer .secao-1-footer .socials{
+        margin-top: 20px;
+        width: 80%;
+        
+    }
+    
+}
